@@ -27,7 +27,7 @@ body {
   justify-content: center; /* กึ่งกลางแนวตั้ง */
   align-items: center;    /* กึ่งกลางแนวนอน */
   
-  background: linear-gradient(135deg, #fceabb, #feeec4);
+  background: linear-gradient(135deg, #b6eefe, #27529c);
   overflow: hidden;
 }
 
