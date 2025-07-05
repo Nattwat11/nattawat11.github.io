@@ -32,6 +32,11 @@
     });
 
     box.addEventListener("click", () => {
+      box.style.opacity = '0';
+      box.style.pointerEvents = 'none';
+      setTimeout(()=>{
+        box.style.display = 'none';
+      },500);
       image.classList.add("show");
       document.querySelector("h1").classList.add("show");
     });
