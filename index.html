@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="hbd.css" />
+  <script src="https://unpkg.com/lottie-web@5.9.6/build/player/lottie.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- กล่อง Lottie -->
+    <div id="gift-box" class="lottie-box"></div>
+
+    <!-- ข้อความ -->
+    <h1>Happy Birthday<br>My Friend </h1>
+
+    <!-- ภาพเซอร์ไพรส์ -->
+    <img src="red.png" alt="Surprise!" id="surprise-image" />
+  </div>
+<div id="particles"></div>
+  <script>
+    const box = document.getElementById("gift-box");
+    const image = document.getElementById("surprise-image");
+
+    lottie.loadAnimation({
+      container: box,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'Animation - 1751694719992.json'
+    });
+
+    box.addEventListener("click", () => {
+      image.classList.add("show");
+      document.querySelector("h1").classList.add("show");
+    });
+    const particlesContainer = document.getElementById("particles");
+    for (let i = 0; i < 100; i++) {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+      particle.style.left = Math.random() * 100 + "vw";
+      particle.style.top = Math.random() * -100 + "vh";
+      particle.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      particlesContainer.appendChild(particle);
+    }
+  </script>
+  
+
+</body>
+</html>
